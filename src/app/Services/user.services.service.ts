@@ -1,4 +1,5 @@
 import { Injectable,EventEmitter } from '@angular/core';
+import { of } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,6 +10,9 @@ export class UserServicesService {
 
   activeUsers = ['Max', 'Anna'];
   inactiveUsers = ['Chris', 'Manu'];
+
+  activeUsers$ = of(this.activeUsers);
+  inactiveUsers$ = of(this.inactiveUsers);
 
   counter:number = 0;
 

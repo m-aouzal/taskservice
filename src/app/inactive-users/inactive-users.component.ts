@@ -10,7 +10,7 @@ export class InactiveUsersComponent {
 
   constructor(private userService: UserServicesService) {}
 
-  users = this.userService.inactiveUsers;
+  users = this.userService.inactiveUsers$;
  
   onSetToActive(id: number) {
     this.userService.onSetToActive(id);
